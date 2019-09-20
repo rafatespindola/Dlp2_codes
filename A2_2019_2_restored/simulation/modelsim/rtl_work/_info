@@ -1,0 +1,42 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim
+Etimer
+Z1 w1569010571
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 d/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim
+Z6 8/home/aluno/Documentos/A2_2019_2_restored/timer.vhd
+Z7 F/home/aluno/Documentos/A2_2019_2_restored/timer.vhd
+l0
+L5
+VfbI5BWbFGJ2V;KOR^W=AU2
+!s100 T[^R6`h?Em[h2I>@>h3Y30
+Z8 OV;C;10.1d;51
+31
+!i10b 1
+Z9 !s108 1569010690.735051
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/aluno/Documentos/A2_2019_2_restored/timer.vhd|
+Z11 !s107 /home/aluno/Documentos/A2_2019_2_restored/timer.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+Abcd_two_digits
+R2
+R3
+R4
+DEx4 work 5 timer 0 22 fbI5BWbFGJ2V;KOR^W=AU2
+l21
+L16
+VNk>oUo][XIO@O^ZTYfFXE1
+!s100 iZ@n_]?=dbBPT@2m662W20
+R8
+31
+!i10b 1
+R9
+R10
+R11
+R12
+R13
