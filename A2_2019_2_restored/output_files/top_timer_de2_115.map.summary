@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Fri Sep 20 17:16:14 2019
-Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
+Analysis & Synthesis Status : Failed - Wed Sep 25 14:12:53 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : top_timer_de2_115
-Top-level Entity Name : timer
+Top-level Entity Name : timer2
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

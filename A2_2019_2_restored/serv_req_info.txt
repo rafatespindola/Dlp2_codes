@@ -1,0 +1,43 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	0x7fe12206c171: ccl_err + 0x8171 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0xb1)
+	0x7fe12206f015: ccl_err + 0xb015 (_Z14err_terminatorv + 0x4b)
+	0x7fe11dadf796: stdc++.so.6 + 0x63796 (_ZN10__cxxabiv111__terminateEPFvvE + 0x6)
+	0x7fe11dadf7c3: stdc++.so.6 + 0x637c3
+	0x7fe11dadf9ee: stdc++.so.6 + 0x639ee
+	0x7fe11db305e7: stdc++.so.6 + 0xb45e7 (_ZSt19__throw_logic_errorPKc + 0x67)
+	0x7fe121970e59: boost_regex.so.1.59.0 + 0x3ce59
+	0x7fe11db3c098: stdc++.so.6 + 0xc0098 (_ZNSsC2EPKcRKSaIcE + 0x38)
+	0x7fe158184603: synth_vrfx + 0x10b603 (_Z20vrfx_message_handler10msg_type_tPKcmS1_P13__va_list_tag + 0x19ccb)
+	0x7fe158247253: synth_vrfx + 0x1ce253 (_ZN7Message9MsgVaListE10msg_type_tPKcmS2_P13__va_list_tag + 0x68d)
+	0x7fe15839bf1b: synth_vrfx + 0x322f1b (_ZNK12VhdlTreeNode5ErrorEPKcz + 0xab)
+	0x7fe15835caf3: synth_vrfx + 0x2e3af3 (_ZN11VhdlInteger9TypeInferEP9VhdlIdDefP3SetjP9VhdlScope + 0x53)
+	0x7fe15830b2f6: synth_vrfx + 0x2922f6 (_ZN16VhdlVariableDecl7ResolveEv + 0xe2)
+	0x7fe158382d5e: synth_vrfx + 0x309d5e (_ZN20VhdlProcessStatement7ResolveEv + 0x68)
+	0x7fe15832e7eb: synth_vrfx + 0x2b57eb (_ZN20VhdlArchitectureBody16RecursiveResolveEv + 0x6b)
+	0x7fe15832ee3a: synth_vrfx + 0x2b5e3a (_ZN14VhdlDesignUnit7ResolveEv + 0x114)
+	0x7fe1581b594a: synth_vrfx + 0x13c94a (_ZN18VRFX_ANALYZER_IMPL24resolve_all_design_unitsEP13HDB_NAMESPACEPSt4listISsSaISsEES5_ + 0xee)
+	0x7fe1581ac6cd: synth_vrfx + 0x1336cd (_ZN13VRFX_ANALYZER24resolve_all_design_unitsEP13HDB_NAMESPACEPSt4listISsSaISsEES5_ + 0x9)
+	0x7fe15a4626a6: synth_sgn + 0x1886a6 (_ZN12SGN_ANALYZER5startEv + 0x586)
+	0x7fe15a47ef4f: synth_sgn + 0x1a4f4f (_Z12sgn_qic_fullP10CMP_FACADERSt6vectorISsSaISsEERS1_IdSaIdEE + 0x41f)
+	   0x41c3b9: quartus_map + 0x1c3b9 (_Z16qsyn_execute_sgnP10CMP_FACADERSt6vectorISsSaISsEERKSsP14THR_NAMED_PIPES8_ + 0x159)
+	   0x437d61: quartus_map + 0x37d61 (_ZN14QSYN_FRAMEWORK12execute_coreEP14THR_NAMED_PIPES1_ + 0x231)
+	   0x43bcec: quartus_map + 0x3bcec (_ZN14QSYN_FRAMEWORK7executeEv + 0xc4c)
+	0x7fe14610575b: comp_qexe + 0x1c75b (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x888)
+	   0x43025c: quartus_map + 0x3025c (_Z9qsyn_mainiPPKc + 0x13c)
+	0x7fe1248dc720: ccl_msg + 0x40720 (_Z15msg_main_threadPv + 0x10)
+	0x7fe121c2e02c: ccl_thr + 0x602c (thr_final_wrapper + 0xc)
+	0x7fe1248dc7df: ccl_msg + 0x407df (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)
+	0x7fe12229f559: ccl_mem + 0xa559 (_Z18mem_thread_wrapperPFPvS_ES_ + 0x99)
+	0x7fe12206cf92: ccl_err + 0x8f92 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)
+	0x7fe121c2e3f2: ccl_thr + 0x63f2 (thr_thread_wrapper + 0x15)
+	0x7fe1248de7e2: ccl_msg + 0x427e2 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xa3)
+	0x7fe11d375ee3: c.so.6 + 0x26ee3 (__libc_start_main + 0xf3)
+	   0x415545: quartus_map + 0x15545
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Wed Sep 25 14:13:59 2019
+</date>
+<version>Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition</version>
+</internal_error>

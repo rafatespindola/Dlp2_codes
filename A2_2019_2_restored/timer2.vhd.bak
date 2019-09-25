@@ -7,7 +7,7 @@ entity timer2 is
         clk, reset : in std_logic; 
         sec_out : out integer range 0 to 59; -- 59 unsigned = 111 011
         min_out : out integer range 0 to 59;
-        hour_out : out integer range 0 to 23 -- 23 unsigned = 10 111
+        hour_out : out integer range 0 to 23; -- 23 unsigned = 10 111
     );
 end entity timer2;
 
@@ -16,8 +16,8 @@ architecture rtl of timer2 is
 begin
     process(clk, reset)
         -- declaracao das variaveis 
-        variable count_sec, count_min : integer range 0 to 59:= 0;
-        variable count_hour : integer range 0 to 23 := 0;
+        variable count_sec, count_min : integer sec_out'range := 0;
+        variable count_hour : integer hour_out'range := 0;
         
         begin 
             sec_out <= count_sec;
@@ -42,7 +42,7 @@ begin
                         count_min := count_min + 1; 
                     end if ;
                 else 
-                    count_sec := count_sec + 1; 
+                    count_sec = count_sec + 1; 
                 end if; 
             end if ;
     end process;
