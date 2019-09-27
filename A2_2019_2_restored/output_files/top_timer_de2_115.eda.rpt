@@ -1,6 +1,6 @@
 EDA Netlist Writer report for top_timer_de2_115
-Fri Sep 20 16:42:53 2019
-Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+Wed Sep 25 14:27:38 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -17,28 +17,28 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, Altera MegaCore Function License 
-Agreement, or other applicable license agreement, including, 
-without limitation, that your use is for the sole purpose of 
-programming logic devices manufactured by Altera and sold by 
-Altera or its authorized distributors.  Please refer to the 
-applicable agreement for further details.
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
 
 
 
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Sep 20 16:42:53 2019 ;
+; EDA Netlist Writer Status ; Successful - Wed Sep 25 14:27:38 2019 ;
 ; Revision Name             ; top_timer_de2_115                     ;
-; Top-level Entity Name     ; top_timer_de2_115                     ;
+; Top-level Entity Name     ; timer2                                ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -50,7 +50,7 @@ applicable agreement for further details.
 ; Option                                                                                            ; Setting                ;
 +---------------------------------------------------------------------------------------------------+------------------------+
 ; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
-; Generate netlist for functional simulation only                                                   ; Off                    ;
+; Generate functional simulation netlist                                                            ; Off                    ;
 ; Time scale                                                                                        ; 1 ps                   ;
 ; Truncate long hierarchy paths                                                                     ; Off                    ;
 ; Map illegal HDL characters                                                                        ; Off                    ;
@@ -66,41 +66,42 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                 ;
-+------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                            ;
-+------------------------------------------------------------------------------------------------------------+
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_85c_slow.vho      ;
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_0c_slow.vho       ;
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_min_1200mv_0c_fast.vho     ;
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115.vho                        ;
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_85c_vhd_slow.sdo  ;
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_0c_vhd_slow.sdo   ;
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_min_1200mv_0c_vhd_fast.sdo ;
-; /home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_vhd.sdo                    ;
-+------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                      ;
++-----------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                 ;
++-----------------------------------------------------------------------------------------------------------------+
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_85c_slow.vho      ;
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_0c_slow.vho       ;
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_min_1200mv_0c_fast.vho     ;
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115.vho                        ;
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_85c_vhd_slow.sdo  ;
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_7_1200mv_0c_vhd_slow.sdo   ;
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_min_1200mv_0c_vhd_fast.sdo ;
+; /home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/top_timer_de2_115_vhd.sdo                    ;
++-----------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 32-bit EDA Netlist Writer
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Sep 20 16:42:52 2019
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Sep 25 14:27:37 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off bcd_timer_2019_2 -c top_timer_de2_115
-Info (204019): Generated file top_timer_de2_115_7_1200mv_85c_slow.vho in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file top_timer_de2_115_7_1200mv_0c_slow.vho in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file top_timer_de2_115_min_1200mv_0c_fast.vho in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file top_timer_de2_115.vho in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file top_timer_de2_115_7_1200mv_85c_vhd_slow.sdo in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file top_timer_de2_115_7_1200mv_0c_vhd_slow.sdo in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file top_timer_de2_115_min_1200mv_0c_vhd_fast.sdo in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file top_timer_de2_115_vhd.sdo in folder "/home/aluno/Documentos/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
-Info: Quartus II 32-bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 328 megabytes
-    Info: Processing ended: Fri Sep 20 16:42:53 2019
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file top_timer_de2_115_7_1200mv_85c_slow.vho in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_timer_de2_115_7_1200mv_0c_slow.vho in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_timer_de2_115_min_1200mv_0c_fast.vho in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_timer_de2_115.vho in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_timer_de2_115_7_1200mv_85c_vhd_slow.sdo in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_timer_de2_115_7_1200mv_0c_vhd_slow.sdo in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_timer_de2_115_min_1200mv_0c_vhd_fast.sdo in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file top_timer_de2_115_vhd.sdo in folder "/home/suy/github/Dlp2_codes/A2_2019_2_restored/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 1031 megabytes
+    Info: Processing ended: Wed Sep 25 14:27:38 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

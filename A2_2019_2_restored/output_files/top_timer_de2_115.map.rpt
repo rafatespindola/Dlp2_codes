@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_timer_de2_115
-Wed Sep 25 14:12:53 2019
+Fri Sep 27 17:36:00 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +43,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Sep 25 14:12:53 2019           ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 27 17:36:00 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; top_timer_de2_115                           ;
-; Top-level Entity Name              ; timer2                                      ;
+; Top-level Entity Name              ; int2bcd                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 34                                          ;
+;     Total combinational functions  ; 34                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 14                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -59,7 +66,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; timer2             ; top_timer_de2_115  ;
+; Top-level entity name                                            ; int2bcd            ; top_timer_de2_115  ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,13 +162,145 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; int2bcd.vhd                      ; yes             ; User VHDL File               ; /home/suy/github/Dlp2_codes/A2_2019_2_restored/int2bcd.vhd                ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; /opt/altera/18.1/quartus/libraries/megafunctions/lpm_divide.tdf           ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; /opt/altera/18.1/quartus/libraries/megafunctions/abs_divider.inc          ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; /opt/altera/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc      ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; /opt/altera/18.1/quartus/libraries/megafunctions/aglobal181.inc           ;         ;
+; db/lpm_divide_hhm.tdf            ; yes             ; Auto-Generated Megafunction  ; /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/lpm_divide_hhm.tdf      ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction  ; /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/sign_div_unsign_9kh.tdf ;         ;
+; db/alt_u_div_64f.tdf             ; yes             ; Auto-Generated Megafunction  ; /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/alt_u_div_64f.tdf       ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/add_sub_7pc.tdf         ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/add_sub_8pc.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                             ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                     ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+; Estimated Total logic elements              ; 34                                                                                                                        ;
+;                                             ;                                                                                                                           ;
+; Total combinational functions               ; 34                                                                                                                        ;
+; Logic element usage by number of LUT inputs ;                                                                                                                           ;
+;     -- 4 input functions                    ; 2                                                                                                                         ;
+;     -- 3 input functions                    ; 11                                                                                                                        ;
+;     -- <=2 input functions                  ; 21                                                                                                                        ;
+;                                             ;                                                                                                                           ;
+; Logic elements by mode                      ;                                                                                                                           ;
+;     -- normal mode                          ; 20                                                                                                                        ;
+;     -- arithmetic mode                      ; 14                                                                                                                        ;
+;                                             ;                                                                                                                           ;
+; Total registers                             ; 0                                                                                                                         ;
+;     -- Dedicated logic registers            ; 0                                                                                                                         ;
+;     -- I/O registers                        ; 0                                                                                                                         ;
+;                                             ;                                                                                                                           ;
+; I/O pins                                    ; 14                                                                                                                        ;
+;                                             ;                                                                                                                           ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                                                         ;
+;                                             ;                                                                                                                           ;
+; Maximum fan-out node                        ; lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider|add_sub_3_result_int[4]~6 ;
+; Maximum fan-out                             ; 12                                                                                                                        ;
+; Total fan-out                               ; 97                                                                                                                        ;
+; Average fan-out                             ; 1.56                                                                                                                      ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                               ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |int2bcd                               ; 34 (4)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |int2bcd                                                                                                 ; int2bcd             ; work         ;
+;    |lpm_divide:Div0|                   ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |int2bcd|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_hhm:auto_generated|  ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |int2bcd|lpm_divide:Div0|lpm_divide_hhm:auto_generated                                                   ; lpm_divide_hhm      ; work         ;
+;          |sign_div_unsign_9kh:divider| ; 30 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |int2bcd|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
+;             |alt_u_div_64f:divider|    ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |int2bcd|lpm_divide:Div0|lpm_divide_hhm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_64f:divider ; alt_u_div_64f       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hhm ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 14                          ;
+; cycloneiii_lcell_comb ; 38                          ;
+;     arith             ; 14                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 11                          ;
+;     normal            ; 24                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 14                          ;
+;         4 data inputs ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 7.40                        ;
+; Average LUT depth     ; 6.78                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 25 14:12:42 2019
+    Info: Processing started: Fri Sep 27 17:35:46 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd_timer_2019_2 -c top_timer_de2_115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -177,12 +316,47 @@ Info (12021): Found 2 design units, including 1 entities, in source file timer.v
 Info (12021): Found 2 design units, including 1 entities, in source file pll_50mhz_10khz.vhd
     Info (12022): Found design unit 1: pll_50mhz_10khz-SYN File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/pll_50mhz_10khz.vhd Line: 51
     Info (12023): Found entity 1: pll_50mhz_10khz File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/pll_50mhz_10khz.vhd Line: 42
-Error (10500): VHDL syntax error at timer2.vhd(45) near text "=";  expecting "(", or "'", or "." File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/timer2.vhd Line: 45
-Info (12021): Found 0 design units, including 0 entities, in source file timer2.vhd
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 924 megabytes
-    Error: Processing ended: Wed Sep 25 14:12:53 2019
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:28
+Info (12021): Found 2 design units, including 1 entities, in source file timer2.vhd
+    Info (12022): Found design unit 1: timer2-rtl File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/timer2.vhd Line: 14
+    Info (12023): Found entity 1: timer2 File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/timer2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bcd2ssd2.vhd
+    Info (12022): Found design unit 1: bcd2ssd2-arch File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/bcd2ssd2.vhd Line: 13
+    Info (12023): Found entity 1: bcd2ssd2 File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/bcd2ssd2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file int2bcd.vhd
+    Info (12022): Found design unit 1: int2bcd-rtl File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/int2bcd.vhd Line: 12
+    Info (12023): Found entity 1: int2bcd File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/int2bcd.vhd Line: 5
+Info (12127): Elaborating entity "int2bcd" for the top level hierarchy
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/int2bcd.vhd Line: 15
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/int2bcd.vhd Line: 15
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/int2bcd.vhd Line: 15
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hhm.tdf
+    Info (12023): Found entity 1: lpm_divide_hhm File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/lpm_divide_hhm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/sign_div_unsign_9kh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_64f.tdf
+    Info (12023): Found entity 1: alt_u_div_64f File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/alt_u_div_64f.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/db/add_sub_8pc.tdf Line: 22
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dec[3]" is stuck at GND File: /home/suy/github/Dlp2_codes/A2_2019_2_restored/int2bcd.vhd Line: 8
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 48 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 34 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 970 megabytes
+    Info: Processing ended: Fri Sep 27 17:36:00 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:29
 
 
