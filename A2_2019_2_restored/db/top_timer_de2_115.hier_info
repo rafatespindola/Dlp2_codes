@@ -1,23 +1,94 @@
-|int2bcd
-in_int[0] => Div0.IN9
-in_int[0] => Add0.IN12
-in_int[1] => Div0.IN8
-in_int[1] => Add0.IN11
-in_int[2] => Div0.IN7
-in_int[2] => Add0.IN10
-in_int[3] => Div0.IN6
-in_int[3] => Add0.IN9
-in_int[4] => Div0.IN5
-in_int[4] => Add0.IN8
-in_int[5] => Div0.IN4
-in_int[5] => Add0.IN7
-dec[0] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
-dec[1] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
-dec[2] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
-dec[3] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
-un[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-un[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-un[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-un[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+|timer_comp
+clk => count59:segundos.clk
+reset => count59:segundos.rst
+reset => count59:minutos.rst
+reset => count23:horas.rst
+secU[0] <= count59:segundos.uni[0]
+secU[1] <= count59:segundos.uni[1]
+secU[2] <= count59:segundos.uni[2]
+secU[3] <= count59:segundos.uni[3]
+minU[0] <= count59:minutos.uni[0]
+minU[1] <= count59:minutos.uni[1]
+minU[2] <= count59:minutos.uni[2]
+minU[3] <= count59:minutos.uni[3]
+secT[0] <= count59:segundos.dec[0]
+secT[1] <= count59:segundos.dec[1]
+secT[2] <= count59:segundos.dec[2]
+minT[0] <= count59:minutos.dec[0]
+minT[1] <= count59:minutos.dec[1]
+minT[2] <= count59:minutos.dec[2]
+hourU[0] <= count23:horas.uni[0]
+hourU[1] <= count23:horas.uni[1]
+hourT[0] <= count23:horas.dec[0]
+hourT[1] <= count23:horas.dec[1]
+
+
+|timer_comp|count59:segundos
+clk => c_aux.CLK
+clk => u[0].CLK
+clk => u[1].CLK
+clk => u[2].CLK
+clk => u[3].CLK
+clk => d[0].CLK
+clk => d[1].CLK
+clk => d[2].CLK
+rst => u[0].ACLR
+rst => u[1].ACLR
+rst => u[2].ACLR
+rst => u[3].ACLR
+rst => d[0].ACLR
+rst => d[1].ACLR
+rst => d[2].ACLR
+rst => c_aux.ENA
+dec[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+dec[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+dec[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+uni[0] <= u[0].DB_MAX_OUTPUT_PORT_TYPE
+uni[1] <= u[1].DB_MAX_OUTPUT_PORT_TYPE
+uni[2] <= u[2].DB_MAX_OUTPUT_PORT_TYPE
+uni[3] <= u[3].DB_MAX_OUTPUT_PORT_TYPE
+c <= c_aux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_comp|count59:minutos
+clk => c_aux.CLK
+clk => u[0].CLK
+clk => u[1].CLK
+clk => u[2].CLK
+clk => u[3].CLK
+clk => d[0].CLK
+clk => d[1].CLK
+clk => d[2].CLK
+rst => u[0].ACLR
+rst => u[1].ACLR
+rst => u[2].ACLR
+rst => u[3].ACLR
+rst => d[0].ACLR
+rst => d[1].ACLR
+rst => d[2].ACLR
+rst => c_aux.ENA
+dec[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+dec[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+dec[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+uni[0] <= u[0].DB_MAX_OUTPUT_PORT_TYPE
+uni[1] <= u[1].DB_MAX_OUTPUT_PORT_TYPE
+uni[2] <= u[2].DB_MAX_OUTPUT_PORT_TYPE
+uni[3] <= u[3].DB_MAX_OUTPUT_PORT_TYPE
+c <= c_aux.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_comp|count23:horas
+clk => u[0].CLK
+clk => u[1].CLK
+clk => d[0].CLK
+clk => d[1].CLK
+rst => u[0].ACLR
+rst => u[1].ACLR
+rst => d[0].ACLR
+rst => d[1].ACLR
+dec[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+dec[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+uni[0] <= u[0].DB_MAX_OUTPUT_PORT_TYPE
+uni[1] <= u[1].DB_MAX_OUTPUT_PORT_TYPE
 
 

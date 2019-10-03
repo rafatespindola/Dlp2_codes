@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Sep 27 17:36:00 2019
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Thu Oct  3 05:50:44 2019
+Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : top_timer_de2_115
-Top-level Entity Name : int2bcd
+Top-level Entity Name : timer_comp
 Family : Cyclone IV E
-Total logic elements : 34
-    Total combinational functions : 34
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 14
+Total logic elements : 27
+    Total combinational functions : 27
+    Dedicated logic registers : 20
+Total registers : 20
+Total pins : 20
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

@@ -2,12 +2,13 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
+-- Assim tem apenas 33 elementos logicos
+
 entity timer2 is
     port (
-        clk, reset : in std_logic; 
-        sec_out : out integer range 0 to 59; -- 59 unsigned = 111 011
-        min_out : out integer range 0 to 59;
-        hour_out : out integer range 0 to 23 -- 23 unsigned = 10 111
+        clk, reset : in std_logic;
+        sec_out, min_out : out std_Logic_vector(5 downto 0);
+        hour_out : out std_Logic_vector(4 downto 0)
     );
 end entity timer2;
 
@@ -20,9 +21,18 @@ begin
         variable count_hour : integer range 0 to 23 := 0;
         
         begin 
-            sec_out <= count_sec;
-            min_out <= count_min;
-            hour_out <= count_hour;
+
+            sec_out <= std_logic_vector(
+                to_unsigned(count_sec, sec_out'length)
+            );
+
+            min_out <= std_logic_vector(
+                to_unsigned(count_min, min_out'length)
+            );
+
+            hour_out <= std_logic_vector(
+                to_unsigned(count_hour, hour_out'length)
+            );
 
             if reset='1' then
                 count_sec  := 0;
