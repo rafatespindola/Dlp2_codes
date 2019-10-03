@@ -4,67 +4,61 @@
 # }
 # vlib rtl_work
 # vmap work rtl_work
-# Copying /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Copying /opt/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
+# ** Warning: Copied /opt/altera/13.0sp1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vcom -93 -work work {/home/aluno/Documentos/A2_2019_2_restored/timer.vhd}
+# vcom -93 -work work {/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/count59.vhd}
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
-# -- Compiling entity timer
-# -- Compiling architecture bcd_two_digits of timer
+# -- Compiling entity count59
+# -- Compiling architecture rtl of count59
+# vcom -93 -work work {/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/count23.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity count23
+# -- Compiling architecture rtl of count23
+# vcom -93 -work work {/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/timer_comp.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity timer_comp
+# -- Compiling architecture rtl of timer_comp
 # 
-vsim work.timer(bcd_two_digits)
-# vsim work.timer(bcd_two_digits) 
-# //  ModelSim ALTERA 10.1d Nov  2 2012 Linux 4.9.0-11-amd64
-# //
-# //  Copyright 1991-2012 Mentor Graphics Corporation
-# //  All Rights Reserved.
-# //
-# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
-# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
-# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
-# //
+vsim work.timer_comp
+# vsim work.timer_comp 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.timer(bcd_two_digits)
-ls
-# modelsim.ini
-# msim_transcript
-# rtl_work
-# top_timer_de2_115.sft
-# top_timer_de2_115.vho
-# top_timer_de2_115_7_1200mv_0c_slow.vho
-# top_timer_de2_115_7_1200mv_0c_vhd_slow.sdo
-# top_timer_de2_115_7_1200mv_85c_slow.vho
-# top_timer_de2_115_7_1200mv_85c_vhd_slow.sdo
-# top_timer_de2_115_min_1200mv_0c_fast.vho
-# top_timer_de2_115_min_1200mv_0c_vhd_fast.sdo
-# top_timer_de2_115_modelsim.xrf
-# top_timer_de2_115_run_msim_rtl_vhdl.do
-# top_timer_de2_115_vhd.sdo
-do top
-# Cannot open macro file: top
-do top_timer_de2_115_run_msim_rtl_vhdl.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Modifying modelsim.ini
-# 
-# vcom -93 -work work {/home/aluno/Documentos/A2_2019_2_restored/timer.vhd}
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity timer
-# -- Compiling architecture bcd_two_digits of timer
-# 
+# Loading work.timer_comp(rtl)
+# Loading work.count59(rtl)
+# Loading work.count23(rtl)
+add wave sim:/timer_comp/*
+force -freeze sim:/timer_comp/clk 1 0, 0 {25 ps} -r 50
+force -freeze sim:/timer_comp/reset 1 0
+run 10ns
+restart
+force -freeze sim:/timer_comp/clk 1 0, 0 {25 ps} -r 50
+force -freeze sim:/timer_comp/reset 1 0
+run 10ps
+run 190ps
+noforce sim:/timer_comp/reset
+force -freeze sim:/timer_comp/reset 0 0
+run 100ns
+restart
+force -freeze sim:/timer_comp/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/timer_comp/reset 1 0
+run 200ps
+force -freeze sim:/timer_comp/reset 0 0
+run 200ps
+run 10000ps

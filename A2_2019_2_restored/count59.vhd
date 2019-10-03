@@ -40,6 +40,7 @@ begin
                    d := 0; 
                    c_aux := '1'; 
                 else
+						  u := 0;
                     d := d + 1;
                 end if;
                 else

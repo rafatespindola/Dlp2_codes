@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_timer_de2_115
-Thu Oct  3 05:50:45 2019
+Thu Oct  3 23:45:06 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -42,13 +42,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct  3 05:50:44 2019            ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct  3 23:45:06 2019            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_timer_de2_115                                ;
 ; Top-level Entity Name              ; timer_comp                                       ;
 ; Family                             ; Cyclone IV E                                     ;
-; Total logic elements               ; 27                                               ;
-;     Total combinational functions  ; 27                                               ;
+; Total logic elements               ; 25                                               ;
+;     Total combinational functions  ; 25                                               ;
 ;     Dedicated logic registers      ; 20                                               ;
 ; Total registers                    ; 20                                               ;
 ; Total pins                         ; 20                                               ;
@@ -151,7 +151,7 @@ applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 40          ;
+; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -160,7 +160,7 @@ applicable agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ; < 0.1%      ;
-;     Processors 3-40        ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -180,16 +180,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 27          ;
+; Estimated Total logic elements              ; 25          ;
 ;                                             ;             ;
-; Total combinational functions               ; 27          ;
+; Total combinational functions               ; 25          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 8           ;
-;     -- 3 input functions                    ; 14          ;
-;     -- <=2 input functions                  ; 5           ;
+;     -- 4 input functions                    ; 10          ;
+;     -- 3 input functions                    ; 6           ;
+;     -- <=2 input functions                  ; 9           ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 27          ;
+;     -- normal mode                          ; 25          ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 20          ;
@@ -200,8 +200,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; reset~input ;
 ; Maximum fan-out                             ; 20          ;
-; Total fan-out                               ; 188         ;
-; Average fan-out                             ; 2.16        ;
+; Total fan-out                               ; 178         ;
+; Average fan-out                             ; 2.09        ;
 +---------------------------------------------+-------------+
 
 
@@ -210,10 +210,10 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
-; |timer_comp                ; 27 (0)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |timer_comp                  ; work         ;
+; |timer_comp                ; 25 (0)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |timer_comp                  ; work         ;
 ;    |count23:horas|         ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer_comp|count23:horas    ; work         ;
-;    |count59:minutos|       ; 11 (11)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer_comp|count59:minutos  ; work         ;
-;    |count59:segundos|      ; 11 (11)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer_comp|count59:segundos ; work         ;
+;    |count59:minutos|       ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer_comp|count59:minutos  ; work         ;
+;    |count59:segundos|      ; 10 (10)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |timer_comp|count59:segundos ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -233,15 +233,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_comp|count59:segundos|u[0] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |timer_comp|count59:minutos|u[0]  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |timer_comp|count23:horas|u[0]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |timer_comp|count23:horas|u[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
 +-------------------------------+
@@ -249,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -259,9 +257,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Oct  3 05:50:40 2019
+    Info: Processing started: Thu Oct  3 23:44:57 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off bcd_timer_2019_2 -c top_timer_de2_115
-Info (11104): Parallel Compilation has detected 40 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 16 of the 20 physical processors detected instead.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file top_timer_de2_115.vhd
     Info (12022): Found design unit 1: top_timer_de2_115-top_a3_2019_2
     Info (12023): Found entity 1: top_timer_de2_115
@@ -295,14 +293,14 @@ Info (12128): Elaborating entity "count23" for hierarchy "count23:horas"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 27 logic cells
+    Info (21061): Implemented 25 logic cells
 Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 422 megabytes
-    Info: Processing ended: Thu Oct  3 05:50:45 2019
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 418 megabytes
+    Info: Processing ended: Thu Oct  3 23:45:06 2019
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:04
 
 

@@ -1,5 +1,5 @@
 Flow report for top_timer_de2_115
-Thu Oct  3 05:50:45 2019
+Thu Oct  3 23:45:06 2019
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct  3 05:50:44 2019            ;
+; Flow Status                        ; Successful - Thu Oct  3 23:45:06 2019            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; top_timer_de2_115                                ;
 ; Top-level Entity Name              ; timer_comp                                       ;
 ; Family                             ; Cyclone IV E                                     ;
 ; Device                             ; EP4CE115F29C7                                    ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 27                                               ;
-;     Total combinational functions  ; 27                                               ;
+; Total logic elements               ; 25                                               ;
+;     Total combinational functions  ; 25                                               ;
 ;     Dedicated logic registers      ; 20                                               ;
 ; Total registers                    ; 20                                               ;
 ; Total pins                         ; 20                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/03/2019 05:50:41 ;
+; Start date & time ; 10/03/2019 23:44:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_timer_de2_115   ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+-------------------+-------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value     ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------------+-------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 11373243925133.157008184106586        ; --                ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 11373243925049.157014629813023        ; --                ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --                ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; ALTPLL                                ; --                ; --          ; --             ;
@@ -100,8 +100,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 422 MB              ; 00:00:02                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 418 MB              ; 00:00:04                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,7 +110,7 @@ applicable agreement for further details.
 +----------------------+-------------------------+----------------+------------+----------------+
 ; Module Name          ; Machine Hostname        ; OS Name        ; OS Version ; Processor type ;
 +----------------------+-------------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; quartus-69b945f5b-hpnd8 ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
+; Analysis & Synthesis ; quartus-69b945f5b-8stpj ; Ubuntu 18.04.3 ; 18         ; x86_64         ;
 +----------------------+-------------------------+----------------+------------+----------------+
 
 
