@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity count59 is
     port (
-        clk, rst : in std_logic;
+        clk, rst, ena : in std_logic;
         dec : out std_logic_vector(2 downto 0);
         uni : out std_logic_vector(3 downto 0);
         c : out std_logic        
@@ -34,22 +34,21 @@ begin
             d := 0;
             u := 0;
         elsif(clk'event and clk='1') then
-            if u = 9 then
-                if d = 5 then
-                   u := 0;
-                   d := 0; 
-                   c_aux := '1'; 
-                else
-						  u := 0;
-                    d := d + 1;
+            if ena = '1' then
+                if u = 9 then
+                    if d = 5 then
+                       u := 0;
+                       d := 0; 
+                       c_aux := '1'; 
+                    else
+                        u := 0;
+                        d := d + 1;
+                    end if;
+                    else
+                        c_aux :='0';
+                        u := u + 1;
                 end if;
-                else
-							c_aux :='0';
-                    u := u + 1;
-            end if;
-
+            end if ;
         end if ;
-
     end process;
-    
 end architecture rtl;

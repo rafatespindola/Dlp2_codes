@@ -4,9 +4,9 @@ use IEEE.numeric_std.all;
 
 entity count23 is
     port (
-        clk, rst : in std_logic;
+        clk, rst, ena : in std_logic;
         dec : out std_logic_vector(1 downto 0);
-        uni : out std_logic_vector(1 downto 0)
+        uni : out std_logic_vector(3 downto 0)
     );
 end entity count23;
 
@@ -14,9 +14,9 @@ architecture rtl of count23 is
     
 begin
     
-    process(clk, rst)
+    process(clk, rst, ena)
         variable d : integer range 0 to 2 := 0;
-        variable u : integer range 0 to 3 := 0;
+        variable u : integer range 0 to 9 := 0;
     begin
         -- valores padroes 
         dec <= std_logic_vector(
@@ -31,19 +31,18 @@ begin
             d := 0;
             u := 0;
         elsif(clk'event and clk='1') then
-            if u = 3 then
-                if d = 2 then
-                   u := 0;
-                   d := 0; 
-                else
+            if ena = '1' then
+                if u = 3 and d = 2 then
+                    u := 0;
+                    d := 0;
+                elsif u = 9 then
+                    u := 0; 
                     d := d + 1;
+                else 
+                    u := u + 1; 
                 end if;
-                else
-                    u := u + 1;
-            end if;
-
+            end if ;
         end if ;
-
     end process;
     
 end architecture rtl;
