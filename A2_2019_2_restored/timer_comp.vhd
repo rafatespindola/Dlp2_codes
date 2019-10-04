@@ -59,7 +59,7 @@ begin
         rst => reset, 
         uni => hourU,
         dec => hourT,
-        ena => carryM
+        ena => carryM and carryS
     );
     
 end architecture rtl;
