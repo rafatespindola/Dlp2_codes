@@ -3,12 +3,14 @@ A ideia destes dois componentes é: optimizar o processo de contagem, a fim de e
 o máximo possível de bits. 
 
 
-O count23 consome apenas 4 elementos lógicos, enquanto o count59
-gasta apenas 10 elementos lógicos. 
+O count23 consome apenas 11 elementos lógicos, enquanto o count59
+gasta apenas 13 elementos lógicos.
+
+Percebeu-se que usando o clock sincrono o número de elementos lógicos nos contadores não muda, isso deve-se ao fato que o enable é reaproveitado do flip-flop.
 
 Ambos contadores tem como sua saída o valor da dezena e da unidade, facilitando assim para o timer. 
 
-O count59 possui mais uma saída, a "c" que é apenas um bit para indicar que countou até 59, a ideia por trás disto é simples: nos segundos esta saída servirá de clock para o contador dos minutos, o contador de minutos terá sua saída c usada como clock para o contador das horas, que por fim não tem essa saída. 
+O count59 possui mais uma saída, a "c" que é apenas um bit para indicar que countou até 59, a ideia por trás disto é simples: nos segundos esta saída servirá de enable para o contador dos minutos, o contador de minutos terá sua saída c usada como enable para o contador das horas, que por fim não tem essa saída. 
 
 # Timer
 
@@ -16,11 +18,11 @@ São usados dois count59 para os minutos e segundos, e um count23 para as horas.
 
 A priori fora considerado fazer uma entidade que contasse os minutos, segundos e horas, tudo junto, usando valores inteiros, e até foi possível realiza-la com menos de 40 elementos lógicos, porém haveria um problema na hora de mostrar os valores nos displays, ou seja, economizar-se-ia elemento lógicos no timer porém haveria um ganho significativo na parte de converter bcd para ssds
 
-Este componente consome apenas 25 elementos lógicos enquanto o original possui 80.
+Este componente consome apenas 35 elementos lógicos enquanto o original possui 80.
 
 # Top Level
 
-Consome 81 elementos lógicos, enquanto a original gasta 149. 
+Consome 97 elementos lógicos, enquanto a original gasta 149. 
 
 
 # bcd2ssd
