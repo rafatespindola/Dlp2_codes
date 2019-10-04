@@ -1,14 +1,15 @@
 Quartus II Archive log --	/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/bcd_timer_2019_2.qarlog
 
 Archive:	/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/bcd_timer_2019_2.qar
-Date:		Thu Oct  3 22:38:53 2019
+Date:		Fri Oct  4 00:41:39 2019
 Quartus II 32-bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 
 	=========== Files Selected: ===========
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/SDC1.sdc
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/assignment_defaults.qdf
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/bcd2ssd.vhd
-/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/bcd2ssd2.vhd
+/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/bcd2ssd_max2.vhd
+/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/bcd2ssd_max5.vhd
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/bcd_timer_2019_2.qpf
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/count23.vhd
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/count59.vhd
@@ -21,10 +22,11 @@ Quartus II 32-bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/timer2.vhd
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/timer_comp.vhd
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/timer_tb.vht
+/home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/top_level.vhd
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/top_timer_de2_115.qsf
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/top_timer_de2_115.vhd
 /home/suyan.m/dlp2/Dlp2_codes/A2_2019_2_restored/top_timer_de2_115_assignment_defaults.qdf
-	======= Total: 19 files to archive =======
+	======= Total: 21 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.
