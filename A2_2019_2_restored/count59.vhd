@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-
+-- consumo de 9 elementos logicos 
 entity count59 is
     port (
         clk, rst, ena : in std_logic;
@@ -12,43 +12,46 @@ entity count59 is
 end entity count59;
 
 architecture rtl of count59 is
-    
+    -- Declaracao do componente
+    component countN
+    generic(
+        n : natural := 9; -- o quanto conta  
+        n_bits : natural := 4 -- numero de bits
+    );
+    port (
+        clk, rst, ena : in std_logic; 
+        carry : out std_logic;
+        num_out : out std_logic_vector(n_bits-1 downto 0)
+    );
+    end component; 
+    -- Declaracao dos sinais 
+    signal carry_uni, carry_dec : std_logic; 
 begin
-    
-    process(clk, rst)
-        variable d : integer range 0 to 5 := 0;
-        variable u : integer range 0 to 9 := 0;
-		  variable c_aux : std_logic := '0';
-    begin
-        -- valores padroes 
-        c <= c_aux;
-        dec <= std_logic_vector(
-            to_unsigned(d, dec'length)
-        );
 
-        uni <= std_logic_vector(
-            to_unsigned(u, uni'length)
-        );
+    unidade: countN generic map(
+        n => 9, -- o quanto conta  
+        n_bits => 4 -- numero de bits
+    )
+    port map(
+        clk => clk, 
+        rst => rst, 
+        ena => ena,
+        num_out => uni,
+        carry => carry_uni
+    );
 
-        if rst='1' then
-            d := 0;
-            u := 0;
-        elsif(clk'event and clk='1') then
-            if ena = '1' then
-                if u = 9 then
-                    if d = 5 then
-                       u := 0;
-                       d := 0; 
-                       c_aux := '1'; 
-                    else
-                        u := 0;
-                        d := d + 1;
-                    end if;
-                    else
-                        c_aux :='0';
-                        u := u + 1;
-                end if;
-            end if ;
-        end if ;
-    end process;
+    decimal: countN generic map(
+        n => 5, -- o quanto conta  
+        n_bits => 3 -- numero de bits
+    )
+    port map(
+        clk => clk, 
+        rst => rst, 
+        ena => carry_uni,
+        num_out => dec,
+        carry => carry_dec
+    );
+
+    c <= carry_dec and carry_uni; 
+
 end architecture rtl;
