@@ -17,8 +17,8 @@ architecture rtl of timer_comp is
     component count59
         port (
             clk, rst, ena : in std_logic;
-            dec : out std_logic_vector(2 downto 0);
-            uni : out std_logic_vector(3 downto 0);
+            dec : buffer std_logic_vector(2 downto 0);
+            uni : buffer std_logic_vector(3 downto 0);
             c : out std_logic        
         );
     end component;
@@ -26,16 +26,24 @@ architecture rtl of timer_comp is
     component count23
         port (
             clk, rst, ena : in std_logic;
-            dec : out std_logic_vector(1 downto 0);
-            uni : out std_logic_vector(3 downto 0)
+            dec : buffer std_logic_vector(1 downto 0);
+            uni : buffer std_logic_vector(3 downto 0)
         );
     end component;
 
     -- SINAIS 
-    signal carryS, carryM : std_logic;
+    signal carryS, carryM, hour_ena, hour_ena_next : std_logic;
 
 begin
-    
+        -- Sequencial 
+    process(clk) begin 
+        if(clk'event and clk='1') then
+                hour_ena <= hour_ena_next; 
+        end if;
+    end process;
+
+	 
+	 -- Concorrente 
     segundos: count59 port map(
         clk => clk,
         rst => reset, 
@@ -59,7 +67,9 @@ begin
         rst => reset, 
         uni => hourU,
         dec => hourT,
-        ena => carryM and carryS
+        ena => hour_ena
     );
     
+	hour_ena_next <= carryM and carryS;
+
 end architecture rtl;

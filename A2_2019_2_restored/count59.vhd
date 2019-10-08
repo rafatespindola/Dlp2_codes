@@ -7,7 +7,7 @@ entity count59 is
         clk, rst, ena : in std_logic;
         dec : out std_logic_vector(2 downto 0);
         uni : out std_logic_vector(3 downto 0);
-        c : out std_logic        
+        c : buffer std_logic        
     );
 end entity count59;
 
@@ -25,18 +25,33 @@ architecture rtl of count59 is
     );
     end component; 
     -- Declaracao dos sinais 
-    signal carry_uni, carry_dec : std_logic; 
+    signal carry_uni, c_next : std_logic; 
+	 signal rst_aux : std_logic;
+    signal uni_nx : std_logic_vector(uni'range);
+    signal dec_nx : std_logic_vector(dec'range);
+
 begin
 
+    -- Sequencial 
+    process(clk, rst) begin 
+        if(clk'event and clk='1' and ena='1')  then
+                c<= c_next;
+                uni<=uni_nx;
+                dec<=dec_nx;
+        end if;
+    end process;
+
+
+    -- Concorrente 
     unidade: countN generic map(
         n => 9, -- o quanto conta  
         n_bits => 4 -- numero de bits
     )
     port map(
         clk => clk, 
-        rst => rst, 
+        rst => rst_aux, 
         ena => ena,
-        num_out => uni,
+        num_out => uni_nx,
         carry => carry_uni
     );
 
@@ -46,12 +61,11 @@ begin
     )
     port map(
         clk => clk, 
-        rst => rst, 
+        rst => rst_aux, 
         ena => carry_uni,
-        num_out => dec,
-        carry => carry_dec
+        num_out => dec_nx
     );
-
-    c <= carry_dec and carry_uni; 
-
+ 
+    c_next <= '1' when (uni_nx="1001" and dec_nx="101") else '0'; 	 
+	 rst_aux <= '1' or rst when(c='1') else '0' or rst;
 end architecture rtl;
