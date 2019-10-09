@@ -33,7 +33,10 @@ begin
      
     -- Sequencial 
     process(clk, rst) begin 
-        if(clk'event and clk='1' and ena='1')  then
+        if rst = '1' then 
+            uni <= (others=> '0');
+            dec <= (others => '0');
+        elsif(clk'event and clk='1' and ena='1')  then
                 uni<=uni_nx;
                 dec<=dec_nx;
         end if;
